@@ -1,0 +1,412 @@
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    min-width: 100%;
+    height: 100%;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*=============== BASE ===============*/
+
+
+body {
+    color: black;
+    font-family: 'Protest Riot', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.7;
+    background-color: white;
+    height: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+i {
+    font-family: 'Protest Riot', sans-serif;
+    font-style: normal;
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+
+.container {
+    max-width: 1440px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    gap: 24px;
+}
+
+.section {
+    padding-block: 32px;
+}
+
+.section--lg {
+    padding-block: 40px;
+}
+
+.section__title {
+    font-size: 22px;
+    margin-bottom: 24px;
+    color: white;
+}
+
+.section__title span {
+    color: red;
+}
+
+.form__input {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding-inline: 16px;
+    height: 45px;
+    font-size: 14px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+/*==========  HEADER  ==========*/
+.header__top {
+    background: url(../img/fon__top.png);
+    color: white;
+    padding-block: 15px;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__contact span:first-child {
+    margin-right: 10px;
+}
+
+.header__contact span,
+.header__top-action {
+    font-size: 14px;
+}
+
+.header__top-action {
+    color: white;
+}
+
+.nav,
+.nav__logo-site,
+.nav__menu,
+.nav__list,
+.header__user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    height: 160px;
+    border-bottom: 2px solid black;
+    justify-content: space-between;
+    column-gap: 16px;
+}
+
+.nav__logo {
+    margin-right: 5px;
+}
+
+.nav__logo-img {
+    width: 150px;
+}
+
+.nav__logo-text {
+    font-size: 15px;
+
+    .nav__text {
+        color: black;
+    }
+
+    .nav__text:hover {
+        color: blue;
+    }
+}
+
+.nav__menu {
+    width: 100%;
+    margin-left: 40px;
+}
+
+.nav__list {
+    column-gap: 40px;
+    margin-right: auto;
+    transition: all 0.2s;
+}
+
+.nav__link {
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.nav__link:hover {
+    color: blue;
+}
+
+.header__user-actions {
+    column-gap: 20px;
+    padding-right: 20px;
+}
+
+.header__action_btn {
+    position: relative;
+}
+
+.header__action_btn img {
+    width: 45px;
+}
+
+.header__action_btn .count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: pink;
+    color: black;
+    height: 19px;
+    width: 18px;
+    line-height: 18px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 11px;
+}
+
+.header__action_btn2 .count2 {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: pink;
+    color: black;
+    height: 19px;
+    width: 18px;
+    line-height: 18px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 11px;
+}
+
+.header__action_btn2 {
+    position: relative;
+}
+
+.header__action_btn2 img {
+    width: 45px;
+}
+
+.header__action_btn2 .count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: pink;
+    color: black;
+    height: 19px;
+    width: 18px;
+    line-height: 18px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 11px;
+}
+
+.active-link,
+.nav__link:hover {
+    color: blue;
+}
+
+/*==========  MAIN  ==========*/
+
+/*==========  BREACRUMBS ==========*/
+.breadcrumb {
+    background-color: hsl(0, 0%, 95%);
+    padding-block: 24px;
+}
+
+.breadcrumb__link {
+    color: black;
+}
+
+.breadcrumb__link-span {
+    color: blue;
+}
+
+/*==========  DETAILS ==========*/
+.details__container {
+    grid-template-columns: 5.5fr 6.5fr;
+}
+
+.details__group-img {
+    display: flex;
+    justify-content: center;
+    height: 450px;
+}
+
+.details__title {
+    font-size: 30px;
+}
+
+.details__rarity {
+    font-size: 20px;
+    margin-block: 16px;
+}
+
+.details__price {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding-block: 16px;
+    column-gap: 16px;
+}
+
+.details__price-nav {
+    width: 100px;
+    display: flex;
+    justify-content: left;
+    gap: 5px;
+}
+
+.now__price {
+    font-size: 25px
+}
+
+.details__cost-mora {
+    margin-top: 3px;
+    width: 35px;
+    height: 35px;
+}
+
+.save__price {
+    font-size: 25px;
+}
+
+.details__buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 100px;
+    justify-content: center;
+}
+
+.details__description {
+    margin-block: 16px 32px;
+}
+
+.product__list {
+    border-top: 1px solid black;
+}
+
+.list__item {
+    padding-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.list__item-dis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list__item-img {
+    width: 45px;
+}
+
+
+/*==========  FOOTER  ==========*/
+
+.footer {
+    overflow: hidden;
+    background: url(../img/background.png) no-repeat center center;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.footer__container {
+    grid-template-columns: 4.5fr repeat(2, 2fr) 3.5fr;
+    padding-block: 40px;
+}
+
+.footer__logo-img {
+    width: 120px;
+}
+
+.footer__subtitle {
+    font-size: 20px;
+    margin-block: 20px 10px;
+}
+
+.footer__description {
+    margin-bottom: 4px;
+}
+
+.footer__description span {
+    font-weight: 600;
+}
+
+.footer__social .footer__subtitle {
+    margin-top: 30px;
+}
+
+.footer__social-links {
+    column-gap: 4px;
+}
+
+.footer__social-icon {
+    width: 20px;
+    opacity: 0.7;
+}
+
+.footer__title {
+    font-size: 18px;
+    margin-block: 16px 20px;
+}
+
+.footer__link {
+    font-size: 16px;
+    margin-bottom: 16px;
+    display: block;
+    transition: all .3s;
+    color: black;
+}
+
+.footer__link:hover {
+    color: blue;
+    margin-left: 4px;
+}
